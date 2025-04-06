@@ -71,9 +71,7 @@ The contact form uses SMTP.js to send emails. To configure:
    From: "your_email@example.com"
    ```
 
-## License
 
-This project is licensed under the MIT License.
 
 ## Screenshots
 
