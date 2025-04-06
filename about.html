@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* CSS code for the navigation bar and content */
+
+body {
+  height: 100vh;
+  background-color: aliceblue;
+  background-image: url('bg5.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Set text color to white */
+  padding: 2rem; /* Add padding to the body */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-stretch: expanded;
+}
+
+a:hover {
+  color: orange;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  max-width: 3600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.navbar .logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2em;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu .open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  margin-top: 2rem; /* Add margin to the top of the content section */
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.service p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  /* Adjust font sizes for medium-sized screens */
+  .navbar .logo a {
+    font-size: 1.2em;
+  }
+
+  .navbar .links {
+    gap: 1.5em;
+  }
+
+  .navbar .toggle_btn {
+    font-size: 1.2em;
+  }
+
+  .action_btn {
+    font-size: 0.7rem;
+  }
+
+  .service h2 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Adjust font sizes for small screens */
+  .navbar .logo a {
+    font-size: 1em;
+  }
+
+  .navbar .links {
+    gap: 1em;
+  }
+
+  .navbar .toggle_btn {
+    font-size: 1em;
+  }
+
+  .action_btn {
+    font-size: 0.6rem;
+  }
+
+  .service h2 {
+    font-size: 1rem;
+  }
+
+  .service p {
+    font-size: 0.8rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo"><a href="#">ANIME PARADISE</a></div>
+    <ul class="links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html" class="active">ABOUT</a></li>
+      <li><a href="service.html">SERVICE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="login.html" class="action_btn">LOGIN</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <div class="dropdown_menu">
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="about.html" class="active">ABOUT</a></li>
+    <li><a href="service.html">SERVICE</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+    <li><a href="login.html" class="action_btn">LOGIN</a></li>
+  </div>
+
+  <div class="content">
+    <h1>About Us</h1>
+    <p>Welcome to Anime Paradise, your ultimate destination for all things anime! We are passionate about bringing you the latest and greatest in the world of anime.</p>
+    <p>Our mission is to provide a platform where anime enthusiasts can come together, explore new anime series, discuss their favorite shows, and connect with like-minded individuals.</p>
+    <p>At Anime Paradise, we strive to offer a comprehensive collection of anime content, ranging from classic series to the latest releases. Our team of dedicated anime lovers curates the best anime recommendations, reviews, and news to keep you informed and entertained.</p>
+    <p>Join our vibrant community and embark on a thrilling anime journey with Anime Paradise!</p>
+  </div>
+
+</body>
+</html>

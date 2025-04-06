@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+           contact us
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+
+
+
+
+        <div class="navbar">
+            <div class="logo"><a href="#" >ANIME PARADISE</a></div>
+            <ul class="links">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html" >ABOUT</a></li>
+              <li><a href="service.html" >SERVICE</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <a href="login.html" class="action_btn">LOGIN</a>
+            <div class="toggle_btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    
+        <div class="dropdown_menu ">
+          <li><a href="hero">HOME</a></li>
+              <li><a href="about">ABOUT</a></li>
+              <li><a href="services" >SERVICE</a></li>
+              <li><a href="contact" >CONTACT</a></li>
+              <li><a href="login.html" class="action_btn">LOGIN</a></li>
+        </div>
+    
+      </header>
+          
+
+
+
+      
+    <script>
+        const toggleBtn=document.querySelector('.toggle_btn')
+        const toggleBtnIcon=document.querySelector('.toggle_btn i')
+        const dropDownMenu=document.querySelector('.dropdown_menu')
+  
+        toggleBtn.oneclick=function(){
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+          toggleBtnIcon.classList=isOpen
+          ?'fa-solid fa-xmark'
+          :'fa-solid fa-bars'
+        }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container">
+          <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>CONTACT US</h3>
+            <input type="text" id="name" placeholder="YOUR NAME" required>
+            <input type="email" id="email" placeholder="EMAIL ID" required>
+            
+            <textarea id="message" rows="4 " placeholder="HOW CAN WE HELP YOU ?"></textarea>
+            
+            
+            <button type="submit">send</button>
+
+          </form>
+        </div>
+        <script src=" https://smtpjs.com/v3/smtp.js"> </script>
+        <script>
+            function sendEmail(){
+                                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "--------@gmail.com",
+                    Password : "9E713620963A93938D81620E6C72344BAD7B",
+                    To : "---------@srmist.edu.in",
+                    From : "yogesh0207d@gmail.com",
+                    Subject : "ENQUIRY",
+                    Body : "NAME:"+ document.getElementById("name").value 
+                    +"<br>EMAIL:"+ document.getElementById("email").value
+                   
+                    +"<br>MESSAGE:"+ document.getElementById("message").value
+                }).then(
+                message => alert("Succesfully received Your Message Soon We will Contact You")
+                );
+            }
+        </script>
+
+    </body>
+</html>

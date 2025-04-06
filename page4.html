@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+          BEST SELLING MANGA 
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+    <style>
+      body{
+        background:#111222
+        ;
+      }
+      body {
+      height: 100vh;
+      background: #111222;
+      
+      background-size: cover;
+      background-position: center;
+      color: white; /* Set text color to white */
+      padding: 2rem; /* Add padding to the body */
+      margin: 0; /* Remove default margin */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      font-stretch: expanded;
+    }
+    
+    a:hover {
+      color: orange;
+    }
+    
+    header {
+      position: relative;
+      padding: 0 2rem;
+    }
+    
+    
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      max-width: 3600px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    
+    .navbar .logo a {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+    .navbar .links {
+      display: flex;
+      gap: 2em;
+    }
+    
+    .navbar .toggle_btn {
+      color: #fff;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+    
+    .action_btn {
+      background-color: orange;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: scale 0.2s ease;
+    }
+    
+    .action_btn:hover {
+      scale: 1.05;
+      color: #fff;
+    }
+    
+    .action_btn:active {
+      scale: 0.95;
+    }
+    
+    .dropdown_menu {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      height: 0;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .dropdown_menu .open {
+      height: 240px;
+    }
+    
+    .dropdown_menu li {
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .dropdown_menu .action_btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .content {
+      text-align: center;
+      margin-top: 2rem; /* Add margin to the top of the content section */
+    }
+    
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .service h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .service p {
+      font-size: 1rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 1000px) {
+      /* Adjust font sizes for medium-sized screens */
+      .navbar .logo a {
+        font-size: 1.2em;
+      }
+    
+      .navbar .links {
+        gap: 1.5em;
+      }
+    
+      .navbar .toggle_btn {
+        font-size: 1.2em;
+      }
+    
+      .action_btn {
+        font-size: 0.7rem;
+      }
+    
+      .service h2 {
+        font-size: 1.2rem;
+      }
+    
+      .service p {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      /* Adjust font sizes for small screens */
+      .navbar .logo a {
+        font-size: 1em;
+      }
+    
+      .navbar .links {
+        gap: 1em;
+      }
+    
+      .navbar .toggle_btn {
+        font-size: 1em;
+      }
+    
+      .action_btn {
+        font-size: 0.6rem;
+      }
+    
+      .service h2 {
+        font-size: 1rem;
+      }
+    
+      .service p {
+        font-size: 0.8rem;
+      }
+    }
+    </style>
+    <body>
+
+      <div class="navbar">
+        <div class="logo"><a href="#" >ANIME PARADISE</a></div>
+        <ul class="links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" >ABOUT</a></li>
+          <li><a href="service.html" >SERVICE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="login.html" class="action_btn">LOGIN</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu ">
+      <li><a href="hero">HOME</a></li>
+          <li><a href="about">ABOUT</a></li>
+          <li><a href="services" >SERVICE</a></li>
+          <li><a href="contact" >CONTACT</a></li>
+          <li><a href="login.html" class="action_btn">LOGIN</a></li>
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+
+      <section class="sec-01">
+        <div class="container-01">
+          <h2 class="main-title">10. 
+            Demon Slayer </h2>
+          <div class="content">
+            <div class="image">
+              <img src="untitled-design-6.webp">
+            </div>
+            <div class="text-box">
+              <h3>Demon Slayer (150 million sold)</h3>
+              <p>When the first season of Demon Slayer was released, it took the entire world by storm. Produced by Ufotable, the anime has very high-quality animation. So far, every season of Demon Slayer has had excellent pacing, which makes it very interesting to watch.
+<br><br>
+                The success of the anime resulted in an increase in manga sales. After the first season, fans started buying all the volumes of the manga. Presently, the manga has sold 150 million copies, and with another season on the way, this number will only increase further.</p>
+            </div>
+          </div>
+    
+      </div>
+    </section>
+    <section class="sec-02">
+      <div class="container-01">
+        <h3 class="section-title">9.KochiKame: Tokyo Beat Cops</h3>
+        <div class="content">
+          <div class="image">
+            <img src="ryotsu-from-kochikame.webp" alt="">
+          </div>
+          <div class="info">
+            <h4 class="info-title">KochiKame: Tokyo Beat Cops (156.5 million sold)</h4>
+            <p>KochiKame: Tokyo Beat Cops is a comedy manga series that has been written by Osamu Akimoto. The manga started being serialized in 1976, and it came to an end in 2016. KochiKame has over 1,000 chapters, and they have been compiled into 201 volumes.
+<br><br>
+                Considering the number of volumes, it is not surprising that the series has sold over 150 million units. The manga follows the adventures of a cop named Kankichi Ryotsu, who runs into new problems and uses the most outrageous methods to solve them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-01">
+      <div class="container-01">
+        <h2 class="main-title">8.Slam Dunk </h2>
+        <div class="content">
+          <div class="image">
+            <img src="slam-dunk-entry-image.webp" alt="">
+          </div>
+          <div class="text-box">
+            <h3>Slam Dunk (170 million sold)</h3>
+            <p>For many people, Slam Dunk is the quintessential sports manga. It has been written by Takehiko Inoue, who also created Vagabond and Real. When it came out, the manga inspired many readers to pick up basketball, resulting in an increase in the popularity of the sport in Japan.
+          <br><br>The manga had just 31 volumes, but it has amassed 170 million in sales. With a Slam Dunk movie on the way, the manga will almost certainly see further growth in its sales.</p>
+        </div>
+        </div>
+
+        <section class="sec-02">
+          <div class="container-01">
+            <h3 class="section-title">7.Black Jack</h3>
+            <div class="content">
+              <div class="image">
+                <img src="black-jack-anime.webp" alt="">
+              </div>
+              <div class="info">
+                <h4 class="info-title">Black Jack (176 million sold)</h4>
+                <p>
+                    
+                    Black Jack might not be as well-known as some of the best-selling manga, but it is every bit as successful with over 170 million copies sold. The manga has been written by the legendary Osamu Tezuka.
+<br><br>
+The manga follows a kind doctor named Black Jack who tries to help needy people. Whenever he sees a person in trouble, he tries to make their lives better, but he rarely gets any recognition for his deeds.
+
+
+                    
+                    </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="sec-01">
+          <div class="container-01">
+            <h2 class="main-title">6.Naruto </h2>
+            <div class="content">
+              <div class="image">
+                <img src="naruto-1.webp" alt="">
+              </div>
+              <div class="text-box">
+                <h3>Naruto (250 million sold)</h3>
+                <p>Masashi Kishimoto's Naruto is one of Shonen Jump's "Big Three." The manga is extremely popular, especially in the West, and many readers believe it to be among the best manga of all time. It has over 250 million copies in circulation.
+<br><br>
+                    The story focuses on a young boy named Naruto who wants to become the Hokage, the position of the highest authority in the village. In order to achieve his goal, Naruto has to overcome many obstacles.</p>
+              </div>
+            </div>
+
+
+            <section class="sec-02">
+              <div class="container-01">
+                <h3 class="section-title">5.
+                    Doraemon </h3>
+                <div class="content">
+                  <div class="image">
+                    <img src="doraemon.webp" alt="">
+                  </div>
+                  <div class="info">
+                    <h4 class="info-title">
+                        Doraemon (250 million sold)</h4>
+                    <p>Doraemon is a manga series made specifically for kids. Written by Fujiko F. Fujio, it has over 1,000 chapters, which have been compiled into 45 volumes. Despite being catered toward a very specific demographic, Doraemon has sold over 300 million copies, mainly due to its funny yet interesting story.
+<br><br>
+                        At the center of the manga's story is a robotic cat, named Doraemon, who travels into the past to help a lazy kid named Nobita. The manga has received countless anime and movie adaptations, which have helped boost its popularity even further.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section class="sec-01">
+              <div class="container-01">
+                <h2 class="main-title">4. Dragon Ball
+                </h2>
+                <div class="content">
+                  <div class="image">
+                    <img src="Dragon-Ball-Goku-4-Star-Dragon-Ball.webp" alt="">
+                  </div>
+                  <div class="text-box">
+                    <h3>Dragon Ball (260 million sold)</h3>
+                    <p>When Dragon Ball came out, it revolutionized the shonen genre. Akira Toriyama introduced many new concepts in Dragon Ball, which made it stand out from the other manga of its time. Even now, Toriyama's ideas continue to inspire other mangaka.
+<br><br>
+Given the uniqueness of the series, it is no surprise that Dragon Ball has sold over 250 million copies despite having only 42 volumes. The manga dives into the world of Son Goku, a kid who explores the world while making many allies and foes.</p>
+                  </div>
+                </div>
+
+
+                <section class="sec-02">
+                  <div class="container-01">
+                    <h3 class="section-title">3.Detective Conan</h3>
+                    <div class="content">
+                      <div class="image">
+                        <img src="Conan-using-a-gadget.webp" alt="">
+                      </div>
+                      <div class="info">
+                        <h4 class="info-title">Detective Conan (270 million sold)</h4>
+                        <p>Detective Conan also known as Case Closed, is a mystery manga series. It is the work of Gosho Aoyama, and it has been a part of Shogakukan's Weekly Shonen Sunday magazine since 1994. So far, the manga has 102 volumes and has sold over 250 million copies.
+<br><br>
+Detective Conan covers the adventures of Shinichi Kudo, who is a high school detective. Over time, Shinichi's reputation begins to grow, which causes a criminal organization to make him their target. They try to murder Shinichi with a drug, but instead of killing him, it turns him into a kid.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+
+                <section class="sec-01">
+                  <div class="container-01">
+                    <h2 class="main-title">2.Golgo 13 </h2>
+                    <div class="content">
+                      <div class="image">
+                        <img src="Golgo-13-The-Professional-Cropped.webp" alt="">
+                      </div>
+                      <div class="text-box">
+                        <h3>Golgo 13 (300 million sold)</h3>
+                        <p>Golgo 13 is the oldest of the best-selling manga. It started serializing in 1968 in Shogakukan's Big Comic. Since then, the manga has been consistently releasing new chapters, and they have been compiled into over 200 volumes. Given the fact that it has managed to stay relevant for so long, it isn't surprising to see that it has 300 million copies in circulation.
+<br><br>
+The series follows the adventures of an elite assassin named Golgo 13, who is hired by various groups to complete some of the riskiest missions. Due to his immense skill, Golgo 13 always manages to come out on top.​​​​​
+                        </p>
+                      </div>
+                    </div>
+
+                    <section class="sec-02">
+                      <div class="container-01">
+                        <h3 class="section-title">1. 
+                            One Piece </h3>
+                        <div class="content">
+                          <div class="image">
+                            <img src="Luffy-and-Roger-parallels.webp" alt="">
+                          </div>
+                          <div class="info">
+                            <h4 class="info-title">One Piece (516.6 million sold)</h4>
+                            <p>Eiichiro Oda's One Piece is the best-selling manga of all time by some margin. The manga is still ongoing, yet has already accumulated sales of over 500 million. In the last decade, the popularity of One Piece in the West has increased a lot too.
+<br><br>
+Oda has stated that he wants to wrap up the series within the next two or three years, so the numbers will see a major growth between now and then. With this in mind, it wouldn't be at all surprising to see One Piece end up with over 700 million copies sold.
+
+
+
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+
+    <script>
+      ScrollReveal({
+        reset:true,
+        distance:'60px',
+        duration:2500,
+        delay:400
+      });
+
+      ScrollReveal().reveal('.main-title,.section-title',{delay:500,origin:'left'});
+      ScrollReveal().reveal('.sec-01 .image, .info',{delay:600,origin:'bottom'});
+      ScrollReveal().reveal('.text-box',{delay:700,origin:'right'});
+      ScrollReveal().reveal('.sec-02 .image',{delay:500,origin:'top'});
+    </script>
+    </body>
+
+</html>
+
+
+        

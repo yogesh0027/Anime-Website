@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+           HIGHEST GROSSING ANIME 
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+    <style>
+      body{
+        background:#111222
+        ;
+      }
+      body {
+      height: 100vh;
+      background: #111222;
+      
+      background-size: cover;
+      background-position: center;
+      color: white; /* Set text color to white */
+      padding: 2rem; /* Add padding to the body */
+      margin: 0; /* Remove default margin */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      font-stretch: expanded;
+    }
+    
+    a:hover {
+      color: orange;
+    }
+    
+    header {
+      position: relative;
+      padding: 0 2rem;
+    }
+    
+    
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      max-width: 3600px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    
+    .navbar .logo a {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+    .navbar .links {
+      display: flex;
+      gap: 2em;
+    }
+    
+    .navbar .toggle_btn {
+      color: #fff;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+    
+    .action_btn {
+      background-color: orange;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: scale 0.2s ease;
+    }
+    
+    .action_btn:hover {
+      scale: 1.05;
+      color: #fff;
+    }
+    
+    .action_btn:active {
+      scale: 0.95;
+    }
+    
+    .dropdown_menu {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      height: 0;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .dropdown_menu .open {
+      height: 240px;
+    }
+    
+    .dropdown_menu li {
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .dropdown_menu .action_btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .content {
+      text-align: center;
+      margin-top: 2rem; /* Add margin to the top of the content section */
+    }
+    
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .service h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .service p {
+      font-size: 1rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 1000px) {
+      /* Adjust font sizes for medium-sized screens */
+      .navbar .logo a {
+        font-size: 1.2em;
+      }
+    
+      .navbar .links {
+        gap: 1.5em;
+      }
+    
+      .navbar .toggle_btn {
+        font-size: 1.2em;
+      }
+    
+      .action_btn {
+        font-size: 0.7rem;
+      }
+    
+      .service h2 {
+        font-size: 1.2rem;
+      }
+    
+      .service p {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      /* Adjust font sizes for small screens */
+      .navbar .logo a {
+        font-size: 1em;
+      }
+    
+      .navbar .links {
+        gap: 1em;
+      }
+    
+      .navbar .toggle_btn {
+        font-size: 1em;
+      }
+    
+      .action_btn {
+        font-size: 0.6rem;
+      }
+    
+      .service h2 {
+        font-size: 1rem;
+      }
+    
+      .service p {
+        font-size: 0.8rem;
+      }
+    }
+    </style>
+    <body>
+
+      <div class="navbar">
+        <div class="logo"><a href="#" >ANIME PARADISE</a></div>
+        <ul class="links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" >ABOUT</a></li>
+          <li><a href="service.html" >SERVICE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="login.html" class="action_btn">LOGIN</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu ">
+      <li><a href="hero">HOME</a></li>
+          <li><a href="about">ABOUT</a></li>
+          <li><a href="services" >SERVICE</a></li>
+          <li><a href="contact" >CONTACT</a></li>
+          <li><a href="login.html" class="action_btn">LOGIN</a></li>
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+
+      <section class="sec-01">
+        <div class="container-01">
+          <h2 class="main-title">10. Pretty Cure</h2>
+          <div class="content">
+            <div class="image">
+              <img src="PRETTY.gif">
+            </div>
+            <div class="text-box">
+              <h3>Net Worth: Approximately $9 Billion</h3>
+              <p>Pretty Cure may not exactly be a household name outside of Japan, but it's one of the country's most successful anime franchises. Despite starting decades after the hype for the magical girl fad died down, Pretty Cure was a hit the moment it began in 2004. Pretty Cure then became the dominant magical girl franchise of the 2000s.<br>
+<br>
+                Pretty Cure owes most of its revenue to merchandise sales. In total, Pretty Cure earned almost $9 billion through sales alone. Pretty Cure also owes part of its success and enduring fandom to its accessibility. Every new Pretty Cure anime is made for a new generation of viewers. This ensures that Pretty Cure will always be relevant</p>
+            </div>
+          </div>
+    
+      </div>
+    </section>
+    <section class="sec-02">
+      <div class="container-01">
+        <h3 class="section-title">9. One Piece</h3>
+        <div class="content">
+          <div class="image">
+            <img src="onepiece.gif" alt="">
+          </div>
+          <div class="info">
+            <h4 class="info-title">Net Worth: Approximately $12 Billion</h4>
+            <p>One Piece is one of the longest-running anime series of all time that recently surpassed 1,000 episodes. Part of the anime's popularity came from its huge, dedicated fanbase and a story that never seems to end. The anime follows Monkey D. Luffy and his crew on their quest to find the One Piece treasure and make Luffy the King of Pirates.
+<br><br>
+                One Piece began airing in 1999, and it never dropped in ratings and earnings since then. Despite the anime and movies' blockbuster successes, One Piece's merchandise and video game sales are its highest sources of revenue. Even though One Piece is entering its final arc, it's expected to earn even more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-01">
+      <div class="container-01">
+        <h2 class="main-title">8.Neon Genesis Evangelion</h2>
+        <div class="content">
+          <div class="image">
+            <img src="NEON.gif" alt="">
+          </div>
+          <div class="text-box">
+            <h3>Net Worth: Approximately $12 Billion</h3>
+            <p>Neon Genesis Evangelion had the ingenious idea of showing the darker side of piloting a giant robot. Following teenagers who are forced to fight monsters using their Evangelions, the anime brought never-before-seen gravity to the mecha genre. As a result, Evangelion was dubbed as one of the greatest anime of all time.</p>
+          </div>
+        </div>
+
+        <section class="sec-02">
+          <div class="container-01">
+            <h3 class="section-title">7.Sailor Moon</h3>
+            <div class="content">
+              <div class="image">
+                <img src="sailor-moon-frisbee-3ho2w3r3p935n1gl.gif" alt="">
+              </div>
+              <div class="info">
+                <h4 class="info-title">Net Worth: Approximately $13 Billion</h4>
+                <p>
+                    
+                    
+                    Sailor Moon is about Usagi Tsukino's battle to protect Earth as the titular magical girl. More importantly, Sailor Moon was one of the most important trailblazers in anime. Not only was it one of the first blockbuster shojo anime to break through a male-dominated field, but it also became one of the highest-grossing anime of all time.
+<br><br>
+                    Sailor Moon began airing in 1992, and it never lost its title as the premiere shojo and magical girl anime. Since Sailor Moon's mainline anime ended years ago, most of its revenue now comes from merchandise sales. That's not to say that Sailor Moon's anime is over, since it has movies and more coming out in the future.
+                    
+                    
+                    </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="sec-01">
+          <div class="container-01">
+            <h2 class="main-title">6.First Of The North Star</h2>
+            <div class="content">
+              <div class="image">
+                <img src="FIRST.gif" alt="">
+              </div>
+              <div class="text-box">
+                <h3>Net Worth: Approximately $15 Billion</h3>
+                <p>Fist of the North Star was a revolutionary franchise that began in the '80s and helped anime find its footing abroad. Set in a post-apocalyptic world, the story revolves around Kenshiro, a deadly martial artist who sets out on a mission to protect the innocent and defenseless from various villains.
+<br><br>
+                    Despite its age, Fist of the North Star is still a lucrative franchise. Most of the anime's financial success actually comes from pachinko machines, which generated $14 billion in sales. Fist of the North Star may only have sporadic anime releases these days, but they still earn a decent sum whenever they come out.</p>
+              </div>
+            </div>
+
+
+            <section class="sec-02">
+              <div class="container-01">
+                <h3 class="section-title">5. Yu-Gi-Oh!</h3>
+                <div class="content">
+                  <div class="image">
+                    <img src="yu-gi-oh.gif" alt="">
+                  </div>
+                  <div class="info">
+                    <h4 class="info-title">Net Worth: Approximately $16 Billion</h4>
+                    <p>A franchise about a card game was always going to have an advantage over its other anime competitors, and this is exactly where Yu-Gi-Oh! shines. The anime is ostensibly about Yugi Muto becoming a legendary card duelist, but this isn't its real priority. The anime is arguably a commercial for its titular card game.
+<br><br>
+                        Needless to say, Yu-Gi-Oh!'s advertising worked. Sales for Yu-Gi-Oh! cards alone amassed more than $11 billion, making it the franchise's most important and lucrative source of income. That's not to say Yu-Gi-Oh's! anime and movies aren't financially successful, but they earn only a fraction of what the cards do.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section class="sec-01">
+              <div class="container-01">
+                <h2 class="main-title">4. Dragon Ball
+                </h2>
+                <div class="content">
+                  <div class="image">
+                    <img src="dragon.gif" alt="">
+                  </div>
+                  <div class="text-box">
+                    <h3>Net Worth: Approximately $17 Billion</h3>
+                    <p>Dragon Ball is one of the most popular and well-known anime of all time. It began in the '80s and is still going strong today. Dragon Ball is a shonen classic that follows Son Goku from his youth to adulthood. The franchise gets its name from the mystical Dragon Balls that can grant wishes when all seven are collected.
+<br><br>
+                        Video games and merchandise sales make up a massive portion of Dragon Ball's revenue. Just recently, Dragon Ball's blockbuster movies helped it cement its status as one of the highest-grossing anime in history. Dragon Ball shows no signs of stopping, as seen in its plans for even more releases in the future.</p>
+                  </div>
+                </div>
+
+
+                <section class="sec-02">
+                  <div class="container-01">
+                    <h3 class="section-title">3.Hello Kitty</h3>
+                    <div class="content">
+                      <div class="image">
+                        <img src="hello-kitty-usagif-animation-5.gif" alt="">
+                      </div>
+                      <div class="info">
+                        <h4 class="info-title">Net Worth: Approximately $18.2 Billion</h4>
+                        <p>To most people, Hello Kitty is more of a merchandising mascot than an anime character. Unsurprisingly, Hello Kitty owes most (if not all) of its revenue to merchandise sales. It could even be argued that Hello Kitty's countless but often overlooked anime are just commercials for licensed goods and clothes.
+<br><br>
+                            This sentiment was given credence in 2014 when it was estimated that the character Hello Kitty could earn $8 billion a year. It's safe to say that this approximated sum increased in the years since then. Hello Kitty's cartoons and movies may not exactly be cash cows, but anime was arguably never this franchise's priority.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+
+                <section class="sec-01">
+                  <div class="container-01">
+                    <h2 class="main-title">2.Anpanman</h2>
+                    <div class="content">
+                      <div class="image">
+                        <img src="AN.gif" alt="">
+                      </div>
+                      <div class="text-box">
+                        <h3>Net Worth: Approximately $45 Billion</h3>
+                        <p>Most people who live outside of Japan probably never heard of Anpanman, but it's an immensely popular kids anime in the country. Anpanman is about a superhero with a face made of cake filled with red bean paste — a traditional Japanese sweet called "anpan" — who protects the world from the germ Baikinman.
+<br><br>
+                            Anyone with children knows that a child's dedication to something they love is endless. Unsurprisingly, almost all of Anpanman's revenue came from retail sales for Anpanman-themed kids' items. Anpanman also owes nearly $14 billion of its earnings to ticket sales for the Yokohama Anpanman Children's Museum.
+                        </p>
+                      </div>
+                    </div>
+
+                    <section class="sec-02">
+                      <div class="container-01">
+                        <h3 class="section-title">1. 
+                            Pokémon</h3>
+                        <div class="content">
+                          <div class="image">
+                            <img src="POKE.gif" alt="">
+                          </div>
+                          <div class="info">
+                            <h4 class="info-title">Net Worth: Approximately $71 Billion</h4>
+                            <p>Unsurprisingly, Pokémon is the highest-grossing anime franchise of all time. The Pokemon Company stopped publicizing Pokémon's total worth in 2019. At the time, Pokémon was estimated to be worth around $71 billion. In 2022, the total net worth supposedly ballooned to more than $100 billion.
+<br><br>
+                                Despite an incredibly lucrative anime, trading card game, and video game line-up, licensed merchandising is Pokémon's main lifeline. Sales for licensed merchandise such as toys and books alone consistently outperform Pokémon's anime, manga, cards, and video game sales combined.
+
+
+
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+
+    <script>
+      ScrollReveal({
+        reset:true,
+        distance:'60px',
+        duration:2500,
+        delay:400
+      });
+
+      ScrollReveal().reveal('.main-title,.section-title',{delay:500,origin:'left'});
+      ScrollReveal().reveal('.sec-01 .image, .info',{delay:600,origin:'bottom'});
+      ScrollReveal().reveal('.text-box',{delay:700,origin:'right'});
+      ScrollReveal().reveal('.sec-02 .image',{delay:500,origin:'top'});
+    </script>
+    </body>
+
+</html>
+
+
+        

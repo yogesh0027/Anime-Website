@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	ANIMEPARADISE</title>
+	<style>
+		.wrapper {
+			display: flex;
+			width: 90%;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin-top: 2rem;
+		}
+
+		.cp-text {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 20px;   /* Height of the footer */
+   background: #6cf;
+   text-align: baseline;
+ 
+}
+
+button a{
+	color: #111222;
+}
+		.card {
+			width: 300px;
+			height: 197px;
+			border-radius: 15px;
+			padding: 1.5rem;
+			background: white;
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			transition: 0.4s ease-out;
+			box-shadow: 0px 7px 10px rgba(black, 0.5);
+			margin-bottom: 2rem;
+      
+		}
+
+		.card:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+			background: rgba(black, 0.6);
+			z-index: 2;
+			transition: 0.5s;
+			opacity: 0;
+		}
+
+		.card:before:hover {
+			opacity: 1;
+		}
+
+		.card img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 15px;
+		}
+
+		.card .info {
+			position: relative;
+			z-index: 3;
+			color:#fff;
+			opacity: 0;
+			transform: translateY(30px);
+			transition: 0.5s;
+			background-size:auto;
+			background-color: rgba(0,0,0,0.2);
+			padding: 1px;
+			border-radius: 10px;
+			
+			
+		}
+
+		.card:hover .info {
+			opacity: 1;
+			transform: translateY(0px);
+
+		}
+
+		.card .info h1 {
+			margin: 0px;
+			font-weight: bolder;
+		}
+
+		.card .info p {
+			letter-spacing: 2px;
+			font-size: 18px;
+			margin-top: 8px;
+			font-weight: 600;
+		}
+
+		.card .info button {
+			padding: 0.6rem;
+			outline: none;
+			border: none;
+			border-radius: 3px;
+			background: rgb(255, 255, 255);
+			color: black;
+			font-weight: bold;
+			cursor: pointer;
+			transition: 0.4s ease;
+		}
+
+		.card .info button:hover {
+			background: dodgerblue;
+			color: white;
+		}
+
+		body {
+  height: 100vh;
+  background-color:#111222;
+ 
+  background-size: cover;
+  background-position: center;
+  color: white; /* Set text color to white */
+  padding: 2rem; /* Add padding to the body */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-stretch: expanded;
+}
+
+a:hover {
+  color: orange;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  max-width: 3600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.navbar .logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2em;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu .open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  margin-top: 2rem; /* Add margin to the top of the content section */
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.service p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  /* Adjust font sizes for medium-sized screens */
+  .navbar .logo a {
+    font-size: 1.2em;
+  }
+
+  .navbar .links {
+    gap: 1.5em;
+  }
+
+  .navbar .toggle_btn {
+    font-size: 1.2em;
+  }
+
+  .action_btn {
+    font-size: 0.7rem;
+  }
+
+  .service h2 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Adjust font sizes for small screens */
+  .navbar .logo a {
+    font-size: 1em;
+  }
+
+  .navbar .links {
+    gap: 1em;
+  }
+
+  .navbar .toggle_btn {
+    font-size: 1em;
+  }
+
+  .action_btn {
+    font-size: 0.6rem;
+  }
+
+  .service h2 {
+    font-size: 1rem;
+  }
+
+  .service p {
+    font-size: 0.8rem;
+  }
+}
+
+		@media screen and (max-width: 768px) {
+			.wrapper {
+				width: 100%;
+				padding: 0 2rem;
+			}
+
+			.card {
+				width: 100%;
+				margin: 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<div class="logo"><a href="#">ANIME PARADISE</a></div>
+		<ul class="links">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="about.html">ABOUT</a></li>
+			<li><a href="service.html">SERVICE</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+		<a href="login.html" class="action_btn">LOGIN</a>
+		<div class="toggle_btn">
+			<i class="fa-solid fa-bars"></i>
+		</div>
+	</div>
+
+	<div class="dropdown_menu">
+		<li><a href="hero">HOME</a></li>
+		<li><a href="about">ABOUT</a></li>
+		<li><a href="services">SERVICE</a></li>
+		<li><a href="contact">CONTACT</a></li>
+		<li><a href="login.html" class="action_btn">LOGIN</a></li>
+	</div>
+
+	<div class="wrapper">
+		<div class="card">
+			<img
+				src="animes.jpg"
+			/>
+			<div class="info">
+				<h1 >TOP 10 ANIME SERIES OF ALL TIME</h1>
+				<p >
+					Here are the top 10 anime with a brief description for each:
+				</p>
+				<button><a href="page1.html" >Read More</a></button>
+			</div>
+		</div>
+		<div class="card">
+			<img
+				src="4266702.jpg"
+			/>
+			<div class="info">
+				<h1>ANIME VILLANS OF ALL TIME</h1>
+				<p>
+					Sinister anime villains strike, seducing darkness with wicked charisma, enthralling our souls.
+				</p>
+				<button><a href="page2.html">Read More</a></button>
+			</div>
+		</div>
+		<div class="card">
+			<img
+				src="333.jpg"
+			/>
+			<div class="info">
+				<h1>HIGHEST GROSSING ANIME</h1>
+				<p>
+					A captivating and visually stunning medium with diverse characters, intense plots, and a dedicated global fanbase.
+				</p>
+				<button><a href="page3.html">Read More</a></button>
+			</div>
+		</div>
+		<div class="card">
+			<img
+				src="Best-Manga-of-All-Time.jpg"
+			/>
+			<div class="info">
+				<h1>BEST SELLING MANGA </h1>
+				<p>
+					Epic adventures, captivating art, and boundless imagination in inked narratives.
+				</p>
+				<button><a href="page4.html">Read More</a></button>
+			</div>
+		</div>
+		<div class="card">
+			<img
+				src="747018.jpg"
+			/>
+			<div class="info">
+				<h1>TOP 10 POPULAR ANIME FROM EACH COUNTRY</h1>
+				<p>
+					"Powerful warriors, epic battles."
+				</p>
+				<button><a href="page5.html">Read More</a></button>
+			</div>
+		</div>
+		<div class="card">
+			<img
+				src="TPY.jpg"
+			/>
+			<div class="info">
+				<h1>ANIME MERCHANT ONLINE</h1>
+				<p>
+					"Exclusive anime merchandise for passionate fans!"</p>
+					<button><a href="https://www.etsy.com/in-en/market/anime_merchant"  target="_blank">Read More</a></button>
+			</div>
+		</div>
+	</div>
+	<p class="cp-text" style="color: #fff;">
+		© Copyright 2023 Anime Paradise. All rights reserved.
+	</p>
+	<script>
+		const toggleBtn = document.querySelector(".toggle_btn");
+		const dropdownMenu = document.querySelector(".dropdown_menu");
+
+		toggleBtn.addEventListener("click", () => {
+			dropdownMenu.classList.toggle("open");
+		});
+	</script>
+</body>
+</html>

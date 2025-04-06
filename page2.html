@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+           ANIME BADASS VILLIANS OF ALL TIME
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+    <style>
+      body{
+        background:#111222
+        ;
+      }
+      body {
+      height: 100vh;
+      background: #111222;
+      
+      background-size: cover;
+      background-position: center;
+      color: white; /* Set text color to white */
+      padding: 2rem; /* Add padding to the body */
+      margin: 0; /* Remove default margin */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      font-stretch: expanded;
+    }
+    
+    a:hover {
+      color: orange;
+    }
+    
+    header {
+      position: relative;
+      padding: 0 2rem;
+    }
+    
+    
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      max-width: 3600px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    
+    .navbar .logo a {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+    .navbar .links {
+      display: flex;
+      gap: 2em;
+    }
+    
+    .navbar .toggle_btn {
+      color: #fff;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+    
+    .action_btn {
+      background-color: orange;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: scale 0.2s ease;
+    }
+    
+    .action_btn:hover {
+      scale: 1.05;
+      color: #fff;
+    }
+    
+    .action_btn:active {
+      scale: 0.95;
+    }
+    
+    .dropdown_menu {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      height: 0;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .dropdown_menu .open {
+      height: 240px;
+    }
+    
+    .dropdown_menu li {
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .dropdown_menu .action_btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .content {
+      text-align: center;
+      margin-top: 2rem; /* Add margin to the top of the content section */
+    }
+    
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .service h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .service p {
+      font-size: 1rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 1000px) {
+      /* Adjust font sizes for medium-sized screens */
+      .navbar .logo a {
+        font-size: 1.2em;
+      }
+    
+      .navbar .links {
+        gap: 1.5em;
+      }
+    
+      .navbar .toggle_btn {
+        font-size: 1.2em;
+      }
+    
+      .action_btn {
+        font-size: 0.7rem;
+      }
+    
+      .service h2 {
+        font-size: 1.2rem;
+      }
+    
+      .service p {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      /* Adjust font sizes for small screens */
+      .navbar .logo a {
+        font-size: 1em;
+      }
+    
+      .navbar .links {
+        gap: 1em;
+      }
+    
+      .navbar .toggle_btn {
+        font-size: 1em;
+      }
+    
+      .action_btn {
+        font-size: 0.6rem;
+      }
+    
+      .service h2 {
+        font-size: 1rem;
+      }
+    
+      .service p {
+        font-size: 0.8rem;
+      }
+    }
+    </style>
+    <body>
+
+      <div class="navbar">
+        <div class="logo"><a href="#" >ANIME PARADISE</a></div>
+        <ul class="links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" >ABOUT</a></li>
+          <li><a href="service.html" >SERVICE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="login.html" class="action_btn">LOGIN</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu ">
+      <li><a href="hero">HOME</a></li>
+          <li><a href="about">ABOUT</a></li>
+          <li><a href="services" >SERVICE</a></li>
+          <li><a href="contact" >CONTACT</a></li>
+          <li><a href="login.html" class="action_btn">LOGIN</a></li>
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+
+      <section class="sec-01">
+        <div class="container-01">
+          <h2 class="main-title">10. SUKUNA FROM JUJUTSU KAISEN</h2>
+          <div class="content">
+            <div class="image">
+              <img src="sukuna.gif">
+            </div>
+            <div class="text-box">
+              <h3>DESCRIPTION</h3>
+              <p>Sukuna is a legendary cursed spirit known as the King of Curses. Sealed within the body of Yuji Itadori, Sukuna possesses immense power and a sadistic nature. With multiple sets of arms and incredible curse techniques, Sukuna is a formidable force to be reckoned with. He exudes a menacing aura and his presence alone strikes fear into the hearts of those who encounter him. Despite his malevolence, Sukuna's character is complex, with hints of a twisted code of honor. His role in Jujutsu Kaisen adds a dark and thrilling element to the story.</p>
+            </div>
+          </div>
+    
+      </div>
+    </section>
+    <section class="sec-02">
+      <div class="container-01">
+        <h3 class="section-title">9. ASKELADD FROM VINLAND SAGA</h3>
+        <div class="content">
+          <div class="image">
+            <img src="askeladd.gif" alt="">
+          </div>
+          <div class="info">
+            <h4 class="info-title">DESCRIPTION</h4>
+            <p> Askeladd is a complex and morally ambiguous character in Vinland Saga. He is a cunning Viking mercenary with exceptional combat skills and strategic prowess. As the leader of his band of warriors, Askeladd navigates the treacherous world of medieval warfare and political intrigue. Despite his cold and calculating nature, he displays moments of compassion and cunning wit. Askeladd's character development is central to the narrative, as his actions shape the destiny of the protagonist, Thorfinn. His compelling presence and unpredictable nature make him a captivating and memorable figure in the series.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-01">
+      <div class="container-01">
+        <h2 class="main-title">8. EREN YAEGER FROM VINLAND SAGA</h2>
+        <div class="content">
+          <div class="image">
+            <img src="ERAM.gif" alt="">
+          </div>
+          <div class="text-box">
+            <h3>DESCRIPTION</h3>
+            <p>Eren Yeager is the protagonist of Attack on Titan and undergoes a remarkable transformation throughout the series. Initially portrayed as a determined and passionate young man seeking freedom, Eren becomes a complex and morally ambiguous character driven by revenge and a desire to protect his loved ones. As he uncovers the truth behind the Titans and his own powers, Eren's motivations become increasingly conflicted. His evolution from a determined soldier to a symbol of rebellion adds depth and tension to the story, making him one of the most compelling characters in Attack on Titan.</p>
+          </div>
+        </div>
+
+        <section class="sec-02">
+          <div class="container-01">
+            <h3 class="section-title">7.HISOKA FROM HUNTER X HUNTER</h3>
+            <div class="content">
+              <div class="image">
+                <img src="hisoka.gif" alt="">
+              </div>
+              <div class="info">
+                <h4 class="info-title">DESCRIPTION</h4>
+                <p>
+                    
+                    
+                    Hisoka from Hunter x Hunter: Hisoka is a highly enigmatic and intriguing character in Hunter x Hunter. He is a skilled and sadistic magician who derives pleasure from engaging in battles against strong opponents. Hisoka's ambiguous morality and unpredictable nature make him a fascinating antagonist. While he initially appears to be a selfish and ruthless individual, Hisoka's actions often carry hidden motivations and complex schemes. His obsession with strength and his ever-changing alliances create an aura of unpredictability, making him a captivating and formidable presence in the series.
+                    
+                    
+                    </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="sec-01">
+          <div class="container-01">
+            <h2 class="main-title">6.DOFLAMINGO FROM ONE PIECE</h2>
+            <div class="content">
+              <div class="image">
+                <img src="doflamingo-laughing.gif" alt="">
+              </div>
+              <div class="text-box">
+                <h3>DESCRIPTION</h3>
+                <p>Doflamingo, also known as Donquixote Doflamingo, is a major antagonist in One Piece. As the captain of the Donquixote Pirates and a former Celestial Dragon, Doflamingo wields incredible power and influence. With his mastery of the String-String Fruit, he can manipulate his surroundings and create deadly weapons. Doflamingo is ruthless, charismatic, and possesses a cunning intellect. His dark past and his involvement in the underworld further deepen his complex character. Doflamingo's actions have far-reaching consequences in the One Piece world, making him a formidable and memorable villain.</p>
+              </div>
+            </div>
+
+
+            <section class="sec-02">
+              <div class="container-01">
+                <h3 class="section-title">5. LIGHT YAGAMI FROM DEATH NOTE</h3>
+                <div class="content">
+                  <div class="image">
+                    <img src="light-yagami-death-note.gif" alt="">
+                  </div>
+                  <div class="info">
+                    <h4 class="info-title">DESCRIPTION</h4>
+                    <p>Light Yagami from Death Note: Light Yagami is the protagonist and anti-hero of Death Note. When he discovers a supernatural notebook that allows him to kill anyone whose name he writes in it, Light becomes consumed by his godlike power. Initially motivated by a desire to create a utopian world free of criminals, Light descends into madness as he becomes intoxicated by his newfound authority. He adopts the alter ego "Kira" and sets out to cleanse the world, facing off against the brilliant detective known as L. Light's transformation from a gifted student to a megalomaniacal serial killer is a gripping and thought-provoking journey.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section class="sec-01">
+              <div class="container-01">
+                <h2 class="main-title">4. ITACHI UCHIHA FROM NARUTO SHIPPUSEN</h2>
+                <div class="content">
+                  <div class="image">
+                    <img src="itachi-uchiha-fireball-jutsu-kmaybxhzif6t86iu.gif" alt="">
+                  </div>
+                  <div class="text-box">
+                    <h3>DESCRIPTION</h3>
+                    <p>Itachi Uchiha from Naruto: Itachi Uchiha is a complex and tragic character in the Naruto series. Initially portrayed as a villain, Itachi is later revealed to have carried out a self-sacrificing mission for the sake of his village and his younger brother, Sasuke. Itachi possesses exceptional ninja skills, including the mastery of the Sharingan and the ability to wield powerful genjutsu. Despite his actions being shrouded in mystery and controversy, Itachi's unwavering love for his brother and the sacrifices he made for the greater good make him a deeply compelling and memorable character in Naruto.</p>
+                  </div>
+                </div>
+
+
+                <section class="sec-02">
+                  <div class="container-01">
+                    <h3 class="section-title">3.AIZEN FROM BLEACH</h3>
+                    <div class="content">
+                      <div class="image">
+                        <img src="aizen-bleach.gif" alt="">
+                      </div>
+                      <div class="info">
+                        <h4 class="info-title">DESCRIPTION</h4>
+                        <p>Aizen from Bleach: Sosuke Aizen is one of the central antagonists in the Bleach series. A former captain of the Gotei 13, Aizen orchestrates a complex and manipulative plan to achieve godlike power and reshape the world according to his vision. Aizen is a master manipulator, capable of deceiving even his closest allies. His calm demeanor and superior intellect make him a formidable opponent. With his Zanpakuto, Kyoka Suigetsu, he can create powerful illusions, making him virtually unbeatable. Aizen's intricate schemes and his impact on the Bleach universe solidify his position as a captivating and formidable villain.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+
+                <section class="sec-01">
+                  <div class="container-01">
+                    <h2 class="main-title">2.FRIEZA FROM DRAGON BALL</h2>
+                    <div class="content">
+                      <div class="image">
+                        <img src="FRI.gif" alt="">
+                      </div>
+                      <div class="text-box">
+                        <h3>DESCRIPTION</h3>
+                        <p>Frieza from Dragon Ball: Frieza is one of the most iconic villains in the Dragon Ball series. As a galactic emperor and a ruthless conqueror, Frieza possesses incredible power and a sadistic nature. With his ability to transform and unleash devastating attacks, he becomes a formidable adversary for the series' protagonists. Frieza's cold and calculating demeanor, combined with his insatiable thirst for power, make him a captivating and enduring character. His role as a primary antagonist in Dragon Ball showcases his malevolence and his impact on the series' storyline.</p>
+                      </div>
+                    </div>
+
+                    <section class="sec-02">
+                      <div class="container-01">
+                        <h3 class="section-title">1. MADARA UCHIHA FROM NARUTO SHIPPUDEN</h3>
+                        <div class="content">
+                          <div class="image">
+                            <img src="madara.gif" alt="">
+                          </div>
+                          <div class="info">
+                            <h4 class="info-title">DESCRIPTION</h4>
+                            <p>Madara Uchiha from Naruto: Madara Uchiha is one of the most formidable and influential villains in the Naruto series. As one of the founding members of the Uchiha clan and a legendary shinobi, Madara possesses immense power and a strategic mind. His ambition to create a world of eternal peace through the use of powerful genjutsu drives him to commit acts of great villainy. Madara's strength, intelligence, and complex motivations make him an iconic character in Naruto. His impact on the series and his pivotal role in the history of the ninja world solidify his position as one of the greatest antagonists in anime.
+
+
+
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+
+    <script>
+      ScrollReveal({
+        reset:true,
+        distance:'60px',
+        duration:2500,
+        delay:400
+      });
+
+      ScrollReveal().reveal('.main-title,.section-title',{delay:500,origin:'left'});
+      ScrollReveal().reveal('.sec-01 .image, .info',{delay:600,origin:'bottom'});
+      ScrollReveal().reveal('.text-box',{delay:700,origin:'right'});
+      ScrollReveal().reveal('.sec-02 .image',{delay:500,origin:'top'});
+    </script>
+    </body>
+
+</html>
+
+
+        
